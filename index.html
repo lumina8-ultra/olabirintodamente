@@ -1,409 +1,187 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O Labirinto da Mente - Encontre a Saída</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>O Labirinto da Mente – Ebook</title>
+
+    <meta name="description" content="Descubra como superar dores emocionais, crises e renascer mentalmente com o ebook O Labirinto da Mente. Transforme sua vida hoje.">
+    <meta name="author" content="LUMINA8 Produções">
+
     <style>
-        /* --- CONFIGURAÇÕES GERAIS E FONTES --- */
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lora:wght@400;600&display=swap');
-
-        :root {
-            --color-primary: #0A192F;
-            --color-accent: #D4AF37;
-            --color-text: #E6F1FF;
-            --color-text-dark: #333;
-            --font-headings: 'Lora', serif;
-            --font-body: 'Montserrat', sans-serif;
-        }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
         }
 
         body {
-            font-family: var(--font-body);
-            background-color: var(--color-primary);
-            color: var(--color-text);
-            line-height: 1.7;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        section {
-            padding: 60px 0;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-        }
-
-        section:last-of-type {
-            border-bottom: none;
+            color: #fff;
+            background: #0a0a0a;
+            overflow-x: hidden;
         }
 
         .hero {
-            background-image: linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 1)), url('https://www.transparenttextures.com/patterns/maze-black.png');
-            background-size: 300px, auto;
-            padding: 80px 20px;
-        }
-
-        h1 {
-            font-family: var(--font-headings);
-            font-size: 3rem;
-            color: var(--color-accent);
-            line-height: 1.2;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-
-        .subtitle {
-            font-size: 1.3rem;
-            font-weight: 400;
-            max-width: 650px;
-            margin: 0 auto;
-            opacity: 0.9;
-        }
-
-        h2 {
-            font-family: var(--font-headings);
-            font-size: 2.5rem;
-            color: var(--color-accent);
-            margin-bottom: 30px;
-        }
-
-        h3 {
-            font-family: var(--font-headings);
-            font-size: 1.8rem;
-            color: var(--color-accent);
-            margin-bottom: 20px;
-        }
-
-        .intro p {
-            font-size: 1.1rem;
-            max-width: 680px;
-            margin: 0 auto 20px auto;
-            text-align: left;
-        }
-
-        .target-audience ul, .learn-list ul {
-            list-style: none;
-            padding: 0;
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: left;
-        }
-
-        .target-audience li, .learn-list li {
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="%23D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>') no-repeat left center;
-            padding-left: 35px;
-            margin-bottom: 15px;
-            font-size: 1.1rem;
-        }
-
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            text-align: left;
-            margin-top: 40px;
-        }
-
-        .benefit-item {
-            background-color: rgba(255, 255, 255, 0.05);
-            padding: 25px;
-            border-radius: 8px;
-            border-left: 3px solid var(--color-accent);
-        }
-
-        .benefit-item h4 {
-            font-family: var(--font-headings);
-            color: var(--color-accent);
-            margin-bottom: 10px;
-            font-size: 1.2rem;
-        }
-
-        .storytelling {
-            background-color: rgba(0,0,0,0.2);
-        }
-
-        .storytelling p {
-            max-width: 650px;
-            margin: 0 auto;
-            font-style: italic;
-            font-size: 1.1rem;
-            line-height: 1.8;
-        }
-
-        .testimonial {
-            background-color: rgba(255, 255, 255, 0.05);
-            padding: 30px;
-            border-radius: 8px;
-            max-width: 600px;
-            margin: 0 auto 25px auto;
-            border-left: 4px solid var(--color-accent);
-            text-align: left;
-        }
-
-        .testimonial p {
-            margin-bottom: 15px;
-            font-style: italic;
-        }
-
-        .testimonial .author {
-            font-weight: bold;
-            text-align: right;
-            color: var(--color-accent);
-        }
-
-        .guarantee {
+            width: 100%;
+            min-height: 100vh;
+            background: linear-gradient(120deg, #000, #1c1c1c);
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-
-        .guarantee-seal {
-            width: 120px;
-            height: 120px;
-            background-color: var(--color-accent);
-            color: var(--color-primary);
-            border-radius: 50%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
+            padding: 40px 20px;
             text-align: center;
-            line-height: 1.2;
-            font-family: var(--font-headings);
+            animation: fadeIn 1.5s ease-in-out;
         }
 
-        .guarantee-seal span {
+        @keyframes fadeIn {
+            0% {opacity: 0; transform: translateY(30px);}
+            100% {opacity: 1; transform: translateY(0);}
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .hero h1 {
             font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #9e6bff, #ffffff);
+            -webkit-background-clip: text;
+            color: transparent;
         }
 
-        .guarantee-text {
-            max-width: 500px;
-            text-align: left;
+        .hero p {
+            font-size: 1.25rem;
+            opacity: .85;
+            margin-bottom: 40px;
+            line-height: 1.6;
         }
 
-        .cta-button {
+        .btn {
             display: inline-block;
-            background-color: var(--color-accent);
-            color: var(--color-text-dark);
-            padding: 20px 40px;
-            font-size: 1.5rem;
-            font-weight: bold;
-            font-family: var(--font-body);
-            border-radius: 10px;
+            padding: 15px 35px;
+            background: #9e6bff;
+            color: #000;
+            font-weight: 700;
+            border-radius: 8px;
             text-decoration: none;
-            text-align: center;
-            cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
-            margin: 30px 0;
+            font-size: 1.2rem;
+            transition: .3s ease-in-out;
+            box-shadow: 0 0 15px #9e6bff70;
         }
 
-        .cta-button:hover {
+        .btn:hover {
+            background: #b98cff;
             transform: scale(1.05);
-            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
+            box-shadow: 0 0 25px #b98cffaa;
         }
 
-        .urgency p {
-            max-width: 650px;
-            margin: 0 auto 20px auto;
+        .cover-container {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            animation: fadeIn 2.2s ease-in-out;
+        }
+
+        .cover {
+            width: 260px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px #ffffff15;
+            transition: .3s;
+        }
+
+        .cover:hover {
+            transform: scale(1.03);
+        }
+
+        .section {
+            padding: 60px 20px;
+            text-align: center;
+            background: #111;
+        }
+
+        .section h2 {
+            font-size: 2.3rem;
+            margin-bottom: 25px;
+            color: #b98cff;
+        }
+
+        .benefits {
+            max-width: 900px;
+            margin: auto;
+            text-align: left;
+            line-height: 1.7;
         }
 
         footer {
+            background: #0a0a0a;
+            padding: 20px;
             text-align: center;
-            padding: 40px 20px;
-            background-color: #051120;
+            font-size: 0.9rem;
+            opacity: .6;
         }
 
-        footer p {
-            font-style: italic;
-        }
-
-        @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; }
-            .subtitle { font-size: 1.1rem; }
-            h2 { font-size: 2rem; }
-            .container { padding: 30px 15px; }
-            .cta-button { font-size: 1.2rem; padding: 15px 30px; }
+        @media (max-width: 780px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .hero p {
+                font-size: 1.05rem;
+            }
+            .btn {
+                font-size: 1rem;
+                padding: 12px 28px;
+            }
         }
     </style>
 </head>
+
 <body>
 
-    <header class="hero">
-        <div class="container">
-            <h1>Você se sente perdido dentro da sua própria mente? Existe uma saída.</h1>
-            <p class="subtitle">Recupere o controle da sua vida, reconstrua sua força interior e transforme a dor do passado na base para um futuro extraordinário.</p>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>O Labirinto da Mente</h1>
+
+            <p>
+                Um guia psicológico profundo e transformador para superar dores emocionais, rupturas,
+                crises financeiras e reconstruir sua identidade emocional.
+                Recomece sua vida com clareza e força interior.
+            </p>
+
+            <a href="https://pay.kiwify.com.br/9MV4ppY" class="btn">Comprar Agora</a>
+
+            <div class="cover-container">
+                <img src="https://drive.google.com/uc?export=view&id=1bxTsJrso3jCbSxJ206vL4vLscbrz1XqN"
+                     alt="Capa do Ebook O Labirinto da Mente"
+                     class="cover">
+            </div>
         </div>
-    </header>
+    </section>
 
-    <main>
-        <section class="intro">
-            <div class="container">
-                <p>Olá,</p>
-                <p>Eu sou Dr. [Seu Nome], e dediquei minha carreira como psicólogo a entender os labirintos da mente humana. Ao longo de anos no consultório, vi de perto a dor devastadora que uma separação, uma crise financeira ou a ansiedade crônica podem causar. Vi pessoas brilhantes se sentirem quebradas, sem rumo, acreditando que a felicidade era uma porta que se fechou para sempre.</p>
-                <p>Eu também vi o outro lado. Vi a incrível capacidade humana de se reerguer.</p>
-                <p>A verdade é que a dor não precisa ser seu destino final. Ela pode ser o ponto de partida para a sua maior transformação. O que diferencia quem fica preso no sofrimento de quem emerge mais forte é ter acesso às ferramentas certas.</p>
-                <p>Foi por isso que condensei anos de estudos, técnicas terapêuticas e experiências reais em um guia prático e profundo. Um mapa para você navegar pelo seu próprio labirinto e encontrar a saída.</p>
-                <p>Este guia é o e-book <strong>"O Labirinto da Mente"</strong>.</p>
-            </div>
-        </section>
+    <section class="section">
+        <h2>O que você vai aprender</h2>
 
-        <section class="target-audience">
-            <div class="container">
-                <h2>Para quem este e-book foi feito?</h2>
-                <ul>
-                    <li><strong>Acabou de passar por uma separação dolorosa</strong> e não sabe como recomeçar.</li>
-                    <li><strong>Enfrenta uma crise financeira</strong> que abalou sua autoconfiança e segurança.</li>
-                    <li><strong>Sente-se paralisado pela ansiedade</strong>, com a mente presa em um ciclo de preocupações.</li>
-                    <li><strong>Vive um luto</strong> que parece não ter fim, seja por uma pessoa, um emprego ou um sonho.</li>
-                    <li><strong>Perdeu a motivação e o propósito</strong>, e os dias parecem todos iguais e cinzentos.</li>
-                    <li><strong>Sente que não se reconhece mais</strong> depois de uma grande perda.</li>
-                    <li><strong>Busca, acima de tudo, uma forma prática e eficaz de recuperar seu equilíbrio emocional</strong> e voltar a ser o protagonista da sua própria história.</li>
-                </ul>
-            </div>
-        </section>
+        <div class="benefits">
+            <p>✔ Como reconstruir sua força emocional após perdas.</p>
+            <p>✔ Como reorganizar sua vida durante crises financeiras.</p>
+            <p>✔ Como evitar padrões mentais que sabotam seu futuro.</p>
+            <p>✔ Técnicas psicológicas práticas usadas por profissionais.</p>
+            <p>✔ Como reprogramar seu emocional e recuperar o controle.</p>
+        </div>
 
-        <section class="learn-list">
-            <div class="container">
-                <h2>O que você vai aprender neste guia transformador?</h2>
-                <ul>
-                    <li><strong>Técnicas Psicológicas Comprovadas:</strong> Estratégias baseadas na TCC e Psicologia Positiva para reestruturar seus pensamentos.</li>
-                    <li><strong>Ferramentas de Autoconsciência:</strong> Exercícios práticos para identificar a raiz da sua dor e entender seus gatilhos emocionais.</li>
-                    <li><strong>O Método do Fortalecimento Emocional:</strong> Um passo a passo para construir uma resiliência inabalável.</li>
-                    <li><strong>Estratégias para Superar o Luto Afetivo:</strong> Como processar a perda, ressignificar a história e se abrir para o futuro.</li>
-                    <li><strong>Como Quebrar Ciclos de Dor:</strong> Aprenda a identificar e interromper padrões mentais negativos que te mantêm preso ao sofrimento.</li>
-                    <li><strong>O Guia da Reconstrução da Identidade:</strong> Um mapa para redescobrir quem você é depois de grandes perdas.</li>
-                    <li><strong>Reorganização Emocional e Propósito:</strong> Como encontrar clareza, definir novas metas e reacender a chama da motivação.</li>
-                </ul>
-            </div>
-        </section>
+        <br><br>
 
-        <section class="benefits">
-            <div class="container">
-                <h2>Imagine como seria sua vida se você pudesse...</h2>
-                <div class="benefits-grid">
-                    <div class="benefit-item">
-                        <h4>Acordar com Paz Interior</h4>
-                        <p>Trocar a ansiedade e a angústia matinal por uma sensação de calma e controle sobre seus pensamentos.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <h4>Restaurar sua Autoconfiança</h4>
-                        <p>Olhar para o espelho e enxergar seu verdadeiro valor, com força para enfrentar qualquer desafio.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <h4>Ressignificar o Passado</h4>
-                        <p>Lembrar de suas experiências sem sentir a dor aguda da perda, mas com a serenidade de quem aprendeu.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <h4>Tomar Decisões com Clareza</h4>
-                        <p>Agir com segurança e confiança, livre das amarras do medo e da dúvida que te paralisam.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <h4>Redescobrir a Motivação</h4>
-                        <p>Sentir-se genuinamente entusiasmado com o futuro, fazendo planos com esperança e propósito.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <h4>Reconstruir sua Vida</h4>
-                        <p>Erguer sua vida afetiva e financeira sobre uma base sólida e inabalável de equilíbrio emocional.</p>
-                    </div>
-                </div>
-                <p style="margin-top: 30px; font-weight: bold; font-size: 1.2rem;">Isso não é um sonho. É o resultado que este método pode te proporcionar.</p>
-            </div>
-        </section>
-
-        <section class="storytelling">
-            <div class="container">
-                <h3>A História de quem se perdeu para se encontrar</h3>
-                <p>"Quando a conheci, ela era a sombra de si mesma. Após um divórcio inesperado e a perda do emprego, seu mundo desabou. 'Doutor, parece que estou em um labirinto escuro e todas as paredes são iguais. Não há saída', ela me disse. A ansiedade era sua companheira constante, e a alegria, uma memória distante."</p>
-                <p>"Começamos a jornada. Primeiro, acendemos uma pequena tocha naquele labirinto. Depois, com exercícios, ela começou a desenhar o mapa daquele lugar, entendendo cada curva de dor. Ela aprendeu a desarmar as armadilhas mentais que a faziam reviver o sofrimento. Pouco a pouco, a tocha virou um farol. Ela não apenas encontrou a saída; ela aprendeu a construir suas próprias portas."</p>
-                <p><strong>A história dela é a prova de que, com o mapa certo, ninguém precisa ficar perdido para sempre. Esse mapa está em suas mãos agora.</strong></p>
-            </div>
-        </section>
-
-        <section class="testimonials">
-            <div class="container">
-                <h2>Veja o que dizem as pessoas que encontraram a saída:</h2>
-                <div class="testimonial">
-                    <p>"Depois da minha separação, achei que nunca mais seria feliz. Este e-book me pegou pela mão e me mostrou o caminho de volta para mim mesma. As técnicas são práticas e realmente funcionam. Hoje, sinto uma paz que não sentia há anos."</p>
-                    <p class="author">- Mariana F., 34 anos</p>
-                </div>
-                <div class="testimonial">
-                    <p>"A crise financeira me quebrou. Eu sentia vergonha e fracasso. 'O Labirinto da Mente' me ajudou a separar meu valor como pessoa dos meus resultados financeiros. Recuperei minha confiança e, com a mente clara, consegui me reerguer. Foi um divisor de águas."</p>
-                    <p class="author">- Ricardo S., 45 anos</p>
-                </div>
-                <div class="testimonial">
-                    <p>"Eu vivia em um estado constante de ansiedade. Este material me ensinou a quebrar os ciclos de pensamento que me paralisavam. É mais que um livro, é uma caixa de ferramentas para a vida. Recomendo a todos que se sentem perdidos."</p> 
-                    <p class="author">- Juliana P., 29 anos</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="guarantee-section">
-            <div class="container guarantee">
-                <div class="guarantee-seal">
-                    <span>7</span>
-                    DIAS DE GARANTIA
-                </div>
-                <div class="guarantee-text">
-                    <h3>Sua transformação é garantida. Ou seu dinheiro de volta.</h3>
-                    <p>Eu confio tanto no poder de transformação deste guia que ofereço uma <strong>Garantia Incondicional de 7 Dias</strong>. Adquira o e-book, explore todo o conteúdo e, se por qualquer motivo, você sentir que não é para você, basta me enviar um único e-mail e eu devolverei 100% do seu investimento. Sem perguntas, sem burocracia.</p>
-                    <p><strong>O risco é todo meu. A transformação é toda sua.</strong></p>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA PRINCIPAL CORRIGIDO -->
-        <section class="cta-section">
-            <div class="container">
-                <h2>Chegou a hora de escolher o seu futuro.</h2>
-                <p>Você pode continuar tentando encontrar a saída sozinho, gastando meses ou anos em um ciclo de dor e frustração. Ou você pode pegar um atalho: um mapa seguro, testado e comprovado.</p>
-                <p><strong>Qual caminho você escolhe?</strong></p>
-
-                <a href="https://pay.kiwify.com.br/9MV4ppY" 
-                   class="cta-button" 
-                   target="_blank">
-                   Quero recuperar meu equilíbrio emocional agora
-                </a>
-            </div>
-        </section>
-
-        <!-- CTA FINAL CORRIGIDO -->
-        <section class="urgency">
-            <div class="container">
-                <h2>Ainda está em dúvida? Deixe-me ser direto.</h2>
-                <p>A dor de continuar onde você está é muito maior do que o pequeno investimento que você fará hoje. Quanto vale a sua paz de espírito? Quanto vale acordar sentindo-se no controle da sua vida novamente?</p>
-                <p>Este e-book não é apenas um produto. É a sua chance de dar um basta no sofrimento e iniciar o capítulo mais poderoso da sua história.</p>
-                <p><strong>Mas atenção: esta oferta especial de lançamento é por tempo limitado.</strong> O valor irá subir em breve para refletir a profundidade e o poder deste conteúdo. A decisão de agir precisa ser agora.</p>
-
-                <a href="https://pay.kiwify.com.br/9MV4ppY" 
-                   class="cta-button" 
-                   target="_blank"
-                   style="font-size: 1.2rem; background-color: transparent; border: 2px solid var(--color-accent); color: var(--color-accent);">
-                   Garantir meu acesso com desconto
-                </a>
-            </div>
-        </section>
-    </main>
+        <a href="https://pay.kiwify.com.br/9MV4ppY" class="btn">
+            Quero iniciar minha transformação
+        </a>
+    </section>
 
     <footer>
-        <div class="container">
-            <p>Com toda a minha dedicação,</p>
-            <p style="font-size: 1.2rem; font-weight: bold; color: var(--color-accent); margin: 10px 0;">Dr. [Seu Nome]</p>
-            <p>Psicólogo Especialista em Saúde Emocional</p>
-            <p style="font-size: 0.8rem; margin-top: 30px; opacity: 0.6;">© 2025 - Todos os direitos reservados. Este site e seu conteúdo são protegidos por leis de direitos autorais.</p>
-        </div>
+        LUMINA8 Produções © Todos os direitos reservados.
     </footer>
 
 </body>
